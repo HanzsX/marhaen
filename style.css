@@ -278,12 +278,6 @@ nav a {
   background: linear-gradient(transparent, white);
 }
 
-/* TEAM */
-.team-box {
-  max-width: 600px;
-  margin: auto;
-}
-
 /* FORM */
 input, textarea {
   width: 100%;
@@ -664,20 +658,38 @@ p {
 
 .gallery-wrapper {
   position: relative;
-  overflow: visible; /* penting biar tombol gak kepotong */
+  overflow: visible;
 }
 
 .contact-full {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #f4f4f4;
-  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: auto;
+  padding: 60px 20px;
 }
 
 .contact-full .contact-left {
-  max-width: 600px;
+  max-width: 500px; /* diperkecil dari 600px */
+  padding: 20px;    /* lebih kecil */
+}
+
+.contact-left h2 {
+  font-size: 20px; /* kecilkan judul */
+}
+
+.contact-item {
+  font-size: 14px; /* kecilkan isi */
+  margin: 6px 0;
+}
+
+.tagline {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.contact-logo {
+  width: 60px; /* kecilkan logo */
 }
 
 .vm-content {
@@ -700,4 +712,17 @@ p {
   color: #aaa;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right iframe {
+  width: 100%;
+  max-width: 550px;   /* batasi lebar */
+  height: 400px;      /* kecilkan tinggi */
+  border-radius: 10px;
 }
