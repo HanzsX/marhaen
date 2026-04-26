@@ -694,34 +694,27 @@ p {
   .gallery {
     order: 2;
     flex: 0 0 100%;
-    gap: 12px;
-    justify-content: flex-start;
+    gap: 8px;
+    justify-content: center;
     margin-top: 8px;
-    padding: 14px 12px;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .gallery::-webkit-scrollbar {
-    display: none;
+    padding: 14px 4px;
+    overflow: visible;
+    scroll-snap-type: none;
   }
 
   .gallery-item {
-    flex: 0 0 min(52vw, 220px);
-    width: auto;
+    flex: 0 1 calc((100% - 24px) / 4);
+    width: calc((100% - 24px) / 4);
     max-width: none;
     aspect-ratio: 4 / 3;
     height: auto;
     border-radius: 8px;
-    transform: scale(0.94);
-    scroll-snap-align: center;
+    transform: scale(0.92);
+    scroll-snap-align: none;
   }
 
   .gallery-item.active {
-    transform: scale(1);
+    transform: scale(1.04);
   }
 
   .nav-btn {
