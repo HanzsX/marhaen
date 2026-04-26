@@ -694,10 +694,10 @@ p {
   .gallery {
     order: 2;
     flex: 0 0 100%;
-    gap: 14px;
+    gap: 12px;
     justify-content: flex-start;
     margin-top: 8px;
-    padding: 16px 14px;
+    padding: 14px 12px;
     overflow-x: auto;
     overflow-y: visible;
     scroll-snap-type: x mandatory;
@@ -710,13 +710,13 @@ p {
   }
 
   .gallery-item {
-    flex: 0 0 min(76vw, 320px);
+    flex: 0 0 min(52vw, 220px);
     width: auto;
     max-width: none;
     aspect-ratio: 4 / 3;
     height: auto;
     border-radius: 8px;
-    transform: scale(0.92);
+    transform: scale(0.94);
     scroll-snap-align: center;
   }
 
