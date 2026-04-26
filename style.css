@@ -400,10 +400,12 @@ button {
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
   text-decoration: none;
   color: black;
+  text-align: left;
   padding: 4px 0;
   transition: 0.3s;
 }
@@ -417,6 +419,8 @@ button {
   width: 20px;
   height: 20px;
   object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 /* FOOTER */
 footer {
@@ -594,6 +598,7 @@ p {
 .gallery-wrapper {
   position: relative;
   width: 100%;
+  flex: 1 1 100%;
   max-width: 900px;
   margin: 50px auto;
   overflow: hidden;
@@ -605,6 +610,7 @@ p {
   align-items: center;
   gap: 20px;
   transition: transform 0.5s ease;
+  width: 100%;
 }
 
 .gallery-item {
@@ -661,6 +667,51 @@ p {
   overflow: visible;
 }
 
+@media(max-width:768px){
+  .gallery-wrapper {
+    max-width: 100%;
+    margin: 35px auto;
+    overflow: hidden;
+    padding: 0 36px;
+  }
+
+  .gallery {
+    gap: 8px;
+  }
+
+  .gallery-item {
+    width: clamp(52px, calc((100vw - 96px) / 4), 115px);
+    aspect-ratio: 4 / 3;
+    height: auto;
+    border-radius: 8px;
+    transform: scale(0.92);
+  }
+
+  .gallery-item.active {
+    transform: scale(1.06);
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .prev {
+    left: 4px;
+  }
+
+  .next {
+    right: 4px;
+  }
+
+  .gallery-caption {
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
 .contact-full {
   display: flex;
   justify-content: flex-start;
@@ -712,6 +763,14 @@ p {
   color: #aaa;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+@media(max-width:768px){
+  .gallery-caption {
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
 }
 
 .contact-right {
