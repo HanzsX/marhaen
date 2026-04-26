@@ -694,25 +694,34 @@ p {
   .gallery {
     order: 2;
     flex: 0 0 100%;
-    gap: 8px;
-    justify-content: center;
+    gap: 14px;
+    justify-content: flex-start;
     margin-top: 8px;
-    padding: 14px 8px;
+    padding: 16px 14px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
   }
 
   .gallery-item {
-    flex: 1 1 0;
+    flex: 0 0 min(76vw, 320px);
     width: auto;
-    max-width: 96px;
-    min-width: 0;
+    max-width: none;
     aspect-ratio: 4 / 3;
     height: auto;
     border-radius: 8px;
-    transform: scale(0.88);
+    transform: scale(0.92);
+    scroll-snap-align: center;
   }
 
   .gallery-item.active {
-    transform: scale(1.06);
+    transform: scale(1);
   }
 
   .nav-btn {
